@@ -1,0 +1,210 @@
+* {
+  box-sizing: border-box;
+}
+:root{
+  --s: 1.5px;   
+  --c: #ff0000;
+  --x:rgb(255, 255, 255);
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+.fade{
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+from {opacity: .8} 
+to {opacity: 1}
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  justify-content: center;
+  top: 45%;
+  width: auto;
+  padding: 16px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+.prev {
+  left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(202, 200, 200, 0.8);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+/* SECTION 2 */
+.product-detail {
+  width: 100%;
+}
+.product-detail .product-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+}
+.product-picture {
+  position: relative;
+  width: 50%;
+  min-width: 26em;
+  margin:auto;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySlides img{
+  Width:25em;
+  border-radius: 15px;
+  aspect-ratio: 1/1;
+  border-color: #858585;
+  border: 0.5px solid;
+ }
+.product-detail-body{
+  width: 50%;
+}
+
+.product-model
+{
+font-size: 30px;
+font-weight: 600;
+color: rgb(0, 0, 0);
+text-align: center;
+margin: 0 0 20px 0;
+}
+.product-title{
+  font-size:xx-large;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #121212; 
+  margin: 10px 0 20px 0;
+}
+.product-detail-body {
+  font-weight: 500;
+}
+.product-detail-body .product-about {
+  margin: 10px 0 10px 0;
+  font-size: medium;
+  color: #121212;
+}
+.product-detail-body .product-about h4 {
+  font-weight: 250;
+  color: #121212;
+}
+
+.product-detail-body .buttons .buy-now {
+  
+  border: none;
+  background-color: #de1818cd;
+  width: 15em;
+  padding: 8px;
+  border-radius: 10px;
+}
+.product-detail-body .buttons a .buy-now{
+ font-size: 18px;
+ color: white;
+}
+.product-head{
+font-size:18px ;
+margin: 30px 0 0px 0;
+}
+.buttons{
+display: flex;
+justify-content: center;
+margin-top:10px ;
+text-decoration: none;
+     font-size:15px ;
+}
+.table-contents{
+margin: 10px 0 10px 0;
+font-size: 18px;
+}
+.wholePage {
+display: grid;
+grid-template-columns: 0.5fr 2.5fr;
+grid-template-rows: 1fr;
+grid-column-gap: 10px;
+}
+
+.sideNavIncl { grid-area: 1 / 1 / 2 / 2;
+width: 300px; }
+.product-detail{ grid-area: 1 / 2 / 2 / 3; }
+.Specification
+{
+  margin: 5em 0 0 0 ;
+}
+.dimensions img
+{
+Width:40em;
+border-radius: 15px;
+aspect-ratio: 1/1;
+border-color: #858585;
+border: 0.5px solid;
+}
+
+.page-heading
+{
+text-align: center;
+}
+.list-elem {
+  
+  padding-bottom: var(--s);
+  background: 
+    linear-gradient(90deg,var(--c) 50%,var(--x) 0) calc(100% - var(--_p,0%))/200% 100%,
+    linear-gradient(var(--x) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: 0.3s;
+}
+#scam
+{
+    color: rgb(255, 0, 0);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.9);
+}

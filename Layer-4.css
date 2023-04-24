@@ -1,0 +1,98 @@
+:root {
+  --s: 1.5px;
+  --c: #ff0000;
+  --x: rgb(255, 255, 255);
+}
+.page {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 768px) {
+  .page {
+    flex-direction: column;
+  }
+
+  .item {
+    flex: 1 0 100%;
+  }
+  
+  .item__position {
+    width: 100%;
+    height: 100%;
+  }
+  .sidenav {
+    display: none !important;
+  }
+}
+
+.main {
+  grid-area: main;
+  flex: 1;
+  box-sizing: border-box;
+  text-align: -webkit-center;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+@media (max-width: 768px) {
+  .items {
+    justify-content: center;
+  }
+}
+
+.item {
+  flex: 1 0 10rem;
+  height: 20rem;
+}
+.item a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
+
+.item__position {
+  width: 15rem;
+  height: 15rem;
+  z-index: -1;
+  position: relative;
+  background: #797777;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item__image {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 20px;
+}
+.item__detail {
+  font-size: 1.25em;
+  padding-top: 0.8rem;
+  text-align: center;
+}
+.item__detail p {
+  margin: 0;
+}
+
+.list-elem {
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, var(--x) 0)
+      calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--x) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.3s;
+}
+#scam {
+  color: rgb(255, 0, 0);
+  border-bottom: 1.5px solid rgba(255, 255, 255, 0.9);
+}
+
+.page-heading {
+  font-size: 30px;
+  text-align: center;
+  margin: 1em;
+}
