@@ -73,3 +73,27 @@ function windowResizeHandler () {
 }
 
 window.addEventListener("resize", windowResizeHandler);
+
+
+// Function to animate the counter
+function animateCounter(elementId, targetValue, duration) {
+  const element = document.getElementById(elementId);
+  const startValue = parseInt(element.innerText);
+  const increment = Math.ceil(targetValue / (duration / 20)); // Increase by a fraction of the target value every 20ms
+
+  let currentValue = startValue;
+  let intervalId = setInterval(() => {
+    currentValue += increment;
+    element.innerText = currentValue;
+
+    if (currentValue >= targetValue) {
+      clearInterval(intervalId);
+      element.innerText = targetValue;
+    }
+  }, 20); // Update every 20ms
+}
+
+// Call the animateCounter function for each counter element
+animateCounter("projects-counter", 5, 2000); // Run the counter from 0 to 5 in 2 seconds
+animateCounter("products-counter", 18, 2000); // Run the counter from 0 to 18 in 2 seconds
+animateCounter("customers-counter", 37, 2000); // Run the counter from 0 to 37 in 2 seconds
