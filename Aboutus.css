@@ -126,7 +126,9 @@ h4{
   justify-content: center;
   align-items: center;
 }
-
+.timeline .icon-con i{
+  color: rgb(231, 223, 223);
+}
 .con-1 .icon-con {
   position: absolute;
   right: -20px;
@@ -212,11 +214,8 @@ h4{
   }
   .left-container-arrow,
   .right-container-arrow {
-    border-right: 15px solid #000;
+    border-right: 14px solid #000;
         border-left: 0;
-    left: -15px;
+    left: -14px;
   }
-}
-.timeline i{
-  color: rgb(231, 223, 223);
 }
