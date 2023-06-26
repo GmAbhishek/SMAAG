@@ -101,6 +101,26 @@ h4{
 .con-1:nth-child(8) {
   animation-delay: 7s;
 }
+/* 9th child */
+.con-1:nth-child(9) {
+  animation-delay: 8s;
+}
+
+/* 10th child */
+.con-1:nth-child(10) {
+  animation-delay: 9s;
+}
+
+/* 11th child */
+.con-1:nth-child(11) {
+  animation-delay: 10s;
+}
+
+/* 12th child */
+.con-1:nth-child(12) {
+  animation-delay: 11s;
+}
+
 
 .text-box {
   padding: 20px 30px;
@@ -232,13 +252,50 @@ h4{
   left: 50%;
   margin-left: -3px;
   z-index: -1;
-  animation: moveline 6s linear forwards;
+  animation: changecolor  12s linear forwards;
 }
-@keyframes moveline {
+
+
+@keyframes changecolor {
   0% {
+    background-color: #4B0082; /* Indigo */
     height: 0;
   }
+  8.33% {
+    background-color: #23004D; /* Dark Purple */
+  }
+  16.67% {
+    background-color: #00008B; /* Dark Blue */
+  }
+  25% {
+    background-color: #006400; /* Dark Green */
+  }
+  33.33% {
+    background-color: #008000; /* Green */
+  }
+  41.67% {
+    background-color: #556B2F; /* Dark Olive Green */
+  }
+  50% {
+    background-color: #808000; /* Olive */
+  }
+  58.33% {
+    background-color: #B8860B; /* Dark Goldenrod */
+  }
+  66.67% {
+    background-color: #FF8C00; /* Dark Orange */
+  }
+  75% {
+    background-color: #CD5C5C; /* Indian Red */
+  }
+  83.33% {
+    background-color: #AC2E2E; /* Dark Scarlet */
+  }
+  91.67% {
+    background-color: #8B0000; /* Dark Red */
+  }
   100% {
+    background-color: #000000; /* Indigo */
     height: 100%;
   }
 }
@@ -249,6 +306,69 @@ h4{
   display: inline-block;
   margin-bottom: 15px;
 }
+
+
+.rainbow-1 .left-container-arrow,
+.rainbow-1 .right-container-arrow {
+  color: #4B0082;
+}
+
+.rainbow-2 .left-container-arrow,
+.rainbow-2 .right-container-arrow {
+  color: #23004D;
+}
+
+.rainbow-3 .left-container-arrow,
+.rainbow-3 .right-container-arrow {
+  color: #00008B;
+}
+
+.rainbow-4 .left-container-arrow,
+.rainbow-4 .right-container-arrow {
+  color: #006400;
+}
+
+.rainbow-5 .left-container-arrow,
+.rainbow-5 .right-container-arrow {
+  color: #008000;
+}
+
+.rainbow-6 .left-container-arrow,
+.rainbow-6 .right-container-arrow {
+  color: #556B2F;
+}
+
+.rainbow-7 .left-container-arrow,
+.rainbow-7 .right-container-arrow {
+  color: #808000;
+}
+
+.rainbow-8 .left-container-arrow,
+.rainbow-8 .right-container-arrow {
+  color: #B8860B;
+}
+
+.rainbow-9 .left-container-arrow,
+.rainbow-9 .right-container-arrow {
+  color: #FF8C00;
+}
+
+.rainbow-10 .left-container-arrow,
+.rainbow-10 .right-container-arrow {
+  color: #CD5C5C;
+}
+
+.rainbow-11 .left-container-arrow,
+.rainbow-11 .right-container-arrow {
+  color: #AC2E2E;
+}
+
+.rainbow-12 .left-container-arrow,
+.rainbow-12 .right-container-arrow {
+  color: #8B0000;
+}
+
+
 .left-container-arrow {
   height: 0;
   width: 0;
@@ -257,7 +377,7 @@ h4{
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid#000;;
+  border-left: 15px solid;
   right: -14px;
 }
 .right-container-arrow {
@@ -268,7 +388,7 @@ h4{
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid #000;
+  border-right: 15px solid;
   left: -14px;
 }
 @media screen and (max-width: 600px) {
@@ -298,7 +418,7 @@ h4{
   }
   .left-container-arrow,
   .right-container-arrow {
-    border-right: 14px solid #000;
+    border-right: 14px solid ;
         border-left: 0;
     left: -14px;
   }

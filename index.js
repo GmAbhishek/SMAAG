@@ -75,25 +75,40 @@ function windowResizeHandler () {
 window.addEventListener("resize", windowResizeHandler);
 
 
-// Function to animate the counter
-function animateCounter(elementId, targetValue, duration) {
-  const element = document.getElementById(elementId);
-  const startValue = parseInt(element.innerText);
-  const increment = Math.ceil(targetValue / (duration / 20)); // Increase by a fraction of the target value every 20ms
 
-  let currentValue = startValue;
-  let intervalId = setInterval(() => {
-    currentValue += increment;
-    element.innerText = currentValue;
 
-    if (currentValue >= targetValue) {
-      clearInterval(intervalId);
-      element.innerText = targetValue;
+function animateValue(id, end, duration) {
+  const element = document.getElementById(id);
+  gsap.to(element, {
+    innerHTML: end,
+    duration: duration / 1000,
+    snap: "innerHTML",
+    onUpdate: function () {
+      element.textContent = Math.round(this.targets()[0].innerHTML) + "+";
+    },
+    onComplete: function () {
+      setTimeout(function () {
+        gsap.to(element, {
+          innerHTML: 0,
+          duration: duration / 1000,
+          snap: "innerHTML",
+          onUpdate: function () {
+            element.textContent = Math.round(this.targets()[0].innerHTML) + "+";
+          },
+          onComplete: function () {
+            animateValue(id, end, duration); // Restart the animation from 0 to the specified end value
+          }
+        });
+      }, 10000); // 10-second break before restarting the animation
     }
-  }, 20); // Update every 20ms
+  });
 }
 
-// Call the animateCounter function for each counter element
-animateCounter("projects-counter", 5, 2000); // Run the counter from 0 to 5 in 2 seconds
-animateCounter("products-counter", 18, 2000); // Run the counter from 0 to 18 in 2 seconds
-animateCounter("customers-counter", 37, 2000); // Run the counter from 0 to 37 in 2 seconds
+function startCounters() {
+  animateValue('projects-counter', 5, 2000);
+  animateValue('products-counter', 18, 2000);
+  animateValue('customers-counter', 37, 2000);
+}
+
+window.addEventListener('load', startCounters);
+
