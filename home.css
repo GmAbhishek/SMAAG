@@ -230,7 +230,7 @@
   font-size: 2.5em;
 }
 .intro {
-  background-image: url('assets/factory.jpg');
+  background-image: url('assets/factory.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -249,7 +249,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.466); /* Adjust the last value (0.3) to change the opacity of the background image */
+  background-color: rgba(255, 255, 255, 0.1); /* Adjust the last value (0.3) to change the opacity of the background image */
 }
 
 .intro * {
@@ -260,6 +260,8 @@
 .intro-align{
   text-align: center;
   color:rgb(0, 0, 0);
+  text-shadow: 0 0 500px rgb(255, 255, 255);
+
 }
 
 
