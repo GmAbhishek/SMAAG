@@ -4,174 +4,77 @@
     scroll-behavior: smooth;
   }
 }
-:root{
-  --s: 1.5px;   
-  --c: #ff0000;
-  --x:rgb(255, 255, 255);
-}
-.custom-block-wrap {
-  background: rgba(165, 161, 161, 0.25);
-  border-radius: 20px;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.2s;
+
+
+
+
+
+
+
+
+
+
+
+
+.container-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 1fr)); /* Adjust the column size as needed */
+  justify-content: center;
+  align-content: center;
+  justify-items: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  gap: 40px; /* Increased the gap between the containers to 40px */
+  margin: 0 auto;
 }
 
-.custom-block-wrap:hover {
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
-  transform: scale(1.01);
-}
 
-.custom-block-image {
-  display: block;
-  width: 100%;
-  height: 20rem;
-  object-fit: cover;
-  padding: 1em;
-  border-radius: 50px;
-}
 
-.custom-block {
-  border-radius: 0;
-  display: block;
+a {
+  text-decoration: none; /* Remove underline */
+  color: inherit;
 }
 
 .container {
-  --bs-gutter-x: 2rem;
-  --bs-gutter-y: 0;
-  width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  padding-bottom: calc(var(--bs-gutter-x) * 0.5);
-  margin-right: auto;
-  margin-left: auto;
-}
-
- .container a, a:hover, a:visited, a:active {
-  color: inherit;
-  text-decoration: none;
- }
-
-@media (min-width: 576px) {
-  .container{
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container{
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container{
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
-  }
-}
-.row-align {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  max-width: 30em;
+  max-height: 35em;
   display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--bs-gutter-y));
-  margin-right: calc(-0.5 * var(--bs-gutter-x));
-  margin-left: calc(-0.5 * var(--bs-gutter-x));
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.row-align > * {
-  flex-shrink: 0;
+
+.container:hover {
+  transform: scale(1.05);
+}
+
+.container img {
   width: 100%;
   max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
-  padding-left: calc(var(--bs-gutter-x) * 0.5);
-  margin-top: var(--bs-gutter-y);
-} 
-.col {
-  flex: 1 0 0%;
+  height: 35em;
+  border-radius: 4px;
+  margin-bottom: 10px; 
+  object-fit: cover;
+  /* Add margin-bottom to create space below the image */
 }
 
-.col-md-6 {
-  flex: 0 0 auto;
-  width: 50%;
-}
-.col-12 {
-  flex: 0 0 auto;
-  width: 100%;
-}
-.mb-4 {
-  margin-bottom: 1.5rem !important;
-}
-.mb-lg-0 {
-  margin-bottom: 0 !important;
-}
-
-.mb-3 {
-  margin-bottom: 1rem !important;
-}
-.mt-4 {
-  margin-top: 1.5rem !important;
-}
-.w-75 {
-  width: 75% !important;
-}
-.align-items-center {
-  align-items: center !important;
-}
-.my-2 {
-  margin-top: 0.5rem !important;
-  margin-bottom: 0.5rem !important;
-}
-.mb-0 {
-  margin-bottom: 0 !important;
-}
-.ms-auto {
-  margin-left: auto !important;
-}
-
-img{
-  vertical-align: middle;
-}
-
-@media (min-width: 992px) {
-  .col-lg-4 {
-    flex: 0 0 auto;
-    width: 33.33333333%;
-  }
-
-.large-center
-{
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  position: relative;
- text-align: center;
-  font-size: 30px;
-}
+.container p {
+  margin: 0; /* Remove the margin-top and set it to 0 to eliminate extra spacing */
+  font-size: 28px;
+  font-weight:    500;
+  text-decoration: none;
 }
 
 .page-heading
 {
 text-align: center;
+padding-top: 60px;
+font-weight:    500;
+padding-bottom:  30px;
 }
 
-.list-elem {
-  padding-bottom: var(--s);
-  background: 
-    linear-gradient(90deg,var(--c) 50%,var(--x) 0) calc(100% - var(--_p,0%))/200% 100%,
-    linear-gradient(var(--x) 0 0) 0% 100%/var(--_p,0%) var(--s) no-repeat;
-  -webkit-background-clip: text,padding-box;
-          background-clip: text,padding-box;
-  transition: 0.3s;
-}
-#scam
-{
-    color: rgb(255, 0, 0);
-  border-bottom: 1.5px solid rgba(255, 255, 255, 0.9);
-}

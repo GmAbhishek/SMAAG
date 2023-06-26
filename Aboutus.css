@@ -104,11 +104,96 @@ h4{
 
 .text-box {
   padding: 20px 30px;
-  background: #000;;
   position: relative;
   border-radius: 6px;
   font-size: 15px;
 }
+
+.rainbow-1 .text-box {
+  background-color: #4B0082;
+}
+.rainbow-1 .icon-con {
+  background-color: #4B0082;
+}
+
+.rainbow-2 .text-box {
+  background-color: #23004D;
+}
+.rainbow-2 .icon-con {
+  background-color: #23004D;
+}
+
+.rainbow-3 .text-box {
+  background-color: #00008B;
+}
+.rainbow-3 .icon-con {
+  background-color: #00008B;
+}
+
+.rainbow-4 .text-box {
+  background-color: #006400;
+}
+.rainbow-4 .icon-con {
+  background-color: #006400;
+}
+
+.rainbow-5 .text-box {
+  background-color: #008000;
+}
+.rainbow-5 .icon-con {
+  background-color: #008000;
+}
+
+.rainbow-6 .text-box {
+  background-color: #556B2F;
+}
+.rainbow-6 .icon-con {
+  background-color: #556B2F;
+}
+
+.rainbow-7 .text-box {
+  background-color: #808000;
+}
+.rainbow-7 .icon-con {
+  background-color: #808000;
+}
+
+.rainbow-8 .text-box {
+  background-color: #B8860B;
+}
+.rainbow-8 .icon-con {
+  background-color: #B8860B;
+}
+
+.rainbow-9 .text-box {
+  background-color: #FF8C00;
+}
+.rainbow-9 .icon-con {
+  background-color: #FF8C00;
+}
+
+.rainbow-10 .text-box {
+  background-color: #CD5C5C;
+}
+.rainbow-10 .icon-con {
+  background-color: #CD5C5C;
+}
+
+.rainbow-11 .text-box {
+  background-color: #AC2E2E;
+}
+.rainbow-11 .icon-con {
+  background-color: #AC2E2E;
+}
+
+.rainbow-12 .text-box {
+  background-color: #8B0000;
+}
+.rainbow-12 .icon-con {
+  background-color: #8B0000;
+}
+
+
 .left-container {
   left: 0;
 }
@@ -120,14 +205,13 @@ h4{
   width: 40px;
   height: 40px;
   font-size: 20px;
-  background-color: #000;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .timeline .icon-con i{
-  color: rgb(231, 223, 223);
+  color: rgb(255, 255, 255);
 }
 .con-1 .icon-con {
   position: absolute;
